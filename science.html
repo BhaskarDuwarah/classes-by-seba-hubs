@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Science Notes – Class 9 & 10</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f9ff;
+      margin: 0;
+    }
+    header {
+      background-color: #0ea5e9;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .selectors, .mediums, .chapter-list {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .selectors button, .mediums button {
+      background-color: #0ea5e9;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    .selectors button:hover, .mediums button:hover {
+      background-color: #0284c7;
+    }
+    .chapter-list {
+      display: none;
+    }
+    .chapter-list.active {
+      display: block;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #e0f2fe;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #0284c7;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+  <script>
+    function selectClass(classNum) {
+      document.querySelector('.mediums').style.display = 'block';
+      document.querySelector('.mediums').dataset.class = classNum;
+      document.querySelectorAll('.chapter-list').forEach(el => el.classList.remove('active'));
+    }
+
+    function selectMedium(medium) {
+      const classNum = document.querySelector('.mediums').dataset.class;
+      document.querySelectorAll('.chapter-list').forEach(el => el.classList.remove('active'));
+      const targetId = `${classNum}_${medium}`;
+      document.getElementById(targetId).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Class 9 & 10 Science Notes</h1>
+  </header>
+
+  <!-- Step 1: Choose Class -->
+  <div class="selectors">
+    <button onclick="selectClass('class9')">📘 Class 9</button>
+    <button onclick="selectClass('class10')">📗 Class 10</button>
+  </div>
+
+  <!-- Step 2: Choose Medium -->
+  <div class="mediums" style="display: none;" data-class="">
+    <div class="selectors">
+      <button onclick="selectMedium('assamese')">📖 Assamese Medium</button>
+      <button onclick="selectMedium('english')">📘 English Medium</button>
+    </div>
+  </div>
+
+  <!-- Step 3: Chapter Lists -->
+
+  <!-- Class 10 Assamese -->
+  <div id="class10_assamese" class="chapter-list">
+    <h2>📖 Class 10 – Assamese Medium</h2>
+<ul>
+    <li><a href="notes/assamese/class10_ch1.html">১. ৰাসায়নিক প্ৰতিক্ৰিয়া আৰু সমীকৰণ</a></li>
+    <li><a href="notes/assamese/class10_ch2.html">২. অম্ল, ক্ষাৰক আৰু লবণ</a></li>
+    <li><a href="notes/assamese/class10_ch3.html">৩. ধাতু আৰু অধাতু</a></li>
+    <li><a href="notes/assamese/class10_ch4.html">৪. কাৰ্বন আৰু ইয়াৰ যৌগসমূহ</a></li>
+    <li><a href="notes/assamese/class10_ch5.html">৫. মৌলসমূহৰ পৰ্যায়ভিত্তিক বিন্যাস</a></li>
+    <li><a href="notes/assamese/class10_ch6.html">৬. জীৱন প্ৰক্ৰিয়া</a></li>
+    <li><a href="notes/assamese/class10_ch7.html">৭. নিয়ন্ত্ৰণ আৰু সমন্বয়</a></li>
+    <li><a href="notes/assamese/class10_ch8.html">৮. জীৱসমূহ কেনেকৈ পুনৰ উৎপাদন কৰে</a></li>
+    <li><a href="notes/assamese/class10_ch9.html">৯. বংশগতি আৰু উদ্ভৱ</a></li>
+    <li><a href="notes/assamese/class10_ch10.html">১০. পোহৰ – প্ৰতিফলন আৰু প্ৰতিসৰণ</a></li>
+    <li><a href="notes/assamese/class10_ch11.html">১১. মানুহৰ চকু আৰু ৰঙীন পৃথিৱী</a></li>
+    <li><a href="notes/assamese/class10_ch12.html">১২. বিদ্যুৎ</a></li>
+    <li><a href="notes/assamese/class10_ch13.html">১৩. বিদ্যুৎ প্ৰবাহৰ চুম্বকীয় প্ৰভাৱ</a></li>
+    <li><a href="notes/assamese/class10_ch14.html">১৪. শক্তিৰ উৎসসমূহ</a></li>
+    <li><a href="notes/assamese/class10_ch15.html">১৫. আমাৰ পৰিৱেশ</a></li>
+    <li><a href="notes/assamese/class10_ch16.html">১৬. প্ৰাকৃতিক সম্পদৰ সাসঁৰক্ষণীয় ব্যৱস্থাপনা</a></li>
+</ul>
+
+
+  </div>
+
+  <!-- Class 10 English -->
+  <div id="class10_english" class="chapter-list">
+    <h2>📘 Class 10 – English Medium</h2>
+    <ul>
+    <li><a href="notes/english/class10_ch1.html">1. Chemical Reactions and Equations</a></li>
+    <li><a href="notes/english/class10_ch2.html">2. Acids, Bases and Salts</a></li>
+    <li><a href="notes/english/class10_ch3.html">3. Metals and Non-metals</a></li>
+    <li><a href="notes/english/class10_ch4.html">4. Carbon and its Compounds</a></li>
+    <li><a href="notes/english/class10_ch5.html">5. periodic classification of elements</a></li>
+    <li><a href="notes/english/class10_ch6.html">6.life processes</a></li>
+    <li><a href="notes/english/class10_ch7.html">7. Control and Coordination</a></li>
+    <li><a href="notes/english/class10_ch8.html">8.How do Organisms Reproduce</a></li>
+    <li><a href="notes/english/class10_ch9.html">9. Heredity and Evolution</a></li>
+    <li><a href="notes/english/class10_ch10.html">10. Light – Reflection and Refraction</a></li>
+    <li><a href="notes/english/class10_ch11.html">11. The Human Eye and the Colourful World</a></li>
+    <li><a href="notes/english/class10_ch12.html">12. Electricity</a></li>
+    <li><a href="notes/english/class10_ch13.html">13. Magnetic Effects of Electric Current</a></li>
+    <li><a href="notes/english/class10_ch14.html">14 Sources of Energy</a></li>
+    <li><a href="notes/english/class10_ch15.html">15. Our Environment</a></li>
+    <li><a href="notes/english/class10_ch16html">16. Sustainable Management of Natural Resources</a></li>
+</ul>
+
+  </div>
+
+  <!-- Class 9 Assamese -->
+  <div id="class9_assamese" class="chapter-list">
+    <h2>📖 Class 9 – Assamese Medium</h2>
+    <ul>
+    <li><a href="notes/assamese/class9_ch1.html">১. পদাৰ্থ আমাৰ চাৰিওফালে</a></li>
+    <li><a href="notes/assamese/class9_ch2.html">২. আমাৰ চাৰিওফালৰ পদাৰ্থ শুদ্ধ নে অপদাৰ্থ?</a></li>
+    <li><a href="notes/assamese/class9_ch3.html">৩. অণু আৰু অনুৰ</a></li>
+    <li><a href="notes/assamese/class9_ch4.html">৪. পৰমাণুৰ গঠন</a></li>
+    <li><a href="notes/assamese/class9_ch5.html">৫. জীৱনৰ মৌলিক একক</a></li>
+    <li><a href="notes/assamese/class9_ch6.html">৬. কলা</a></li>
+    <li><a href="notes/assamese/class9_ch7.html">৭. জীৱবৈচিত্ৰ্য</a></li>
+    <li><a href="notes/assamese/class9_ch8.html">৮. গতি</a></li>
+    <li><a href="notes/assamese/class9_ch9.html">৯. বল আৰু গতিৰ নিয়ম</a></li>
+    <li><a href="notes/assamese/class9_ch10.html">১০. মহাকর্ষ</a></li>
+    <li><a href="notes/assamese/class9_ch11.html">১১. কাম আৰু শক্তি</a></li>
+    <li><a href="notes/assamese/class9_ch12.html">১২. ধ্বনি</a></li>
+    <li><a href="notes/assamese/class9_ch13.html">১৩. আমি কিয় অসুস্থ হ’ম?</a></li>
+    <li><a href="notes/assamese/class9_ch14.html">১৪. প্ৰাকৃতিক সম্পদ</a></li>
+    <li><a href="notes/assamese/class9_ch15.html">১৫. খাদ্য সম্পদত উন্নতি</a></li>
+</ul>
+
+
+  </div>
+
+  <!-- Class 9 English -->
+  <div id="class9_english" class="chapter-list">
+    <h2>📘 Class 9 – English Medium</h2>
+    <ul>
+    <li><a href="notes/english/class9_ch1.html">1. Matter in Our Surroundings</a></li>
+    <li><a href="notes/english/class9_ch2.html">2. Is Matter Around Us Pure?</a></li>
+    <li><a href="notes/english/class9_ch3.html">3. Atoms and Molecules</a></li>
+    <li><a href="notes/english/class9_ch4.html">4. Structure of the Atom</a></li>
+    <li><a href="notes/english/class9_ch5.html">5. The Fundamental Unit of Life</a></li>
+    <li><a href="notes/english/class9_ch6.html">6. Tissues</a></li>
+    <li><a href="notes/english/class9_ch7.html">7. Diversity of Living Organisms</a></li>
+    <li><a href="notes/english/class9_ch8.html">8. Motion</a></li>
+    <li><a href="notes/english/class9_ch9.html">9. Force and Laws of Motion</a></li>
+    <li><a href="notes/english/class9_ch10.html">10. Gravitation</a></li>
+    <li><a href="notes/english/class9_ch11.html">11. Work and Energy</a></li>
+    <li><a href="notes/english/class9_ch12.html">12. Sound</a></li>
+    <li><a href="notes/english/class9_ch13.html">13. Why Do We Fall Ill?</a></li>
+    <li><a href="notes/english/class9_ch14.html">14. Natural Resources</a></li>
+    <li><a href="notes/english/class9_ch15.html">15. Improvement in Food Resources</a></li>
+</ul>
+
+  </div>
+
+</body>
+</html>

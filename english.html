@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English - SEBA Study Hub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #fff3e0, #ffffff);
+        }
+        header {
+            background-color: #FF7043;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #E64A19;
+            margin-bottom: 10px;
+        }
+        #searchBox {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 15px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #fbe9e7;
+            border-left: 5px solid #FF7043;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        li a {
+            text-decoration: none;
+            color: #D84315;
+            font-weight: bold;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #FF7043;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: #E64A19;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            color: #555;
+            font-size: 0.95em;
+            border-top: 1px solid #ddd;
+        }
+        footer a {
+            color: #D84315;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            #searchBox {
+                width: 90%;
+            }
+            li {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>English - SEBA Study Hub</h1>
+    </header>
+    <main>
+        <h2>📖 Class 9 English</h2>
+        <input type="text" id="searchBox" placeholder="🔎 Search chapters, notes, papers..." onkeyup="searchNotes()">
+
+        <ul id="notesList">
+            <!-- Class 9 Beehive -->
+            <li><a href="notes/fun_they_had.html">The Fun They Had - Notes</a></li>
+            <li><a href="notes/sound_of_music.html">The Sound of Music - Notes</a></li>
+            <li><a href="notes/little_girl.html">The Little Girl - Notes</a></li>
+            <li><a href="notes/a_truly_beautiful_mind.html">A Truly Beautiful Mind - Notes</a></li>
+            <li><a href="notes/snake_and_mirror.html">The Snake and the Mirror - Notes</a></li>
+            <li><a href="notes/my_childhood.html">My Childhood - Notes</a></li>
+            <li><a href="notes/reach_for_the_top.html">Reach For The Top - Notes</a></li>
+            <li><a href="notes/kathmandu.html">Kathmandu - Notes</a></li>
+            <li><a href="notes/if_i_were_you.html">If I Were You - Notes</a></li>
+            <!-- Class 9 Poems -->
+            <li><a href="notes/road_not_taken.html">The Road Not Taken - Poem Notes</a></li>
+            <li><a href="notes/wind.html">Wind - Poem Notes</a></li>
+            <li><a href="notes/rain_on_the_roof.html">Rain on The Roof - Poem Notes</a></li>
+            <li><a href="notes/no_men_are_foreign.html">No Men Are Foreign - Poem Notes</a></li>
+            <!-- Class 9 Moments -->
+            <li><a href="notes/the_lost_child.html">The Lost Child - Notes</a></li>
+            <li><a href="notes/adventures_of_toto.html">The Adventures of Toto - Notes</a></li>
+            <li><a href="notes/the_last_leaf.html">The Last Leaf - Notes</a></li>
+            <li><a href="notes/a_house_is_not_a_home.html">A House is Not a Home - Notes</a></li>
+            <li><a href="#">Sample Solved Paper (2024)</a></li>
+
+            <h2>📘 Class 10 English</h2>
+            <!-- Class 10 First Flight -->
+            <li><a href="notes/a_letter_to_god.html">A Letter to God - Notes</a></li>
+            <li><a href="notes/nelson_mandela.html">Nelson Mandela: Long Walk to Freedom - Notes</a></li>
+            <li><a href="notes/two_stories_about_flying.html">Two Stories About Flying - Notes</a></li>
+            <li><a href="notes/from_the_diary_of_anne_frank.html">From the Diary of Anne Frank - Notes</a></li>
+            <li><a href="notes/glimpses_of_india.html">Glimpses of India - Notes</a></li>
+            <li><a href="notes/mijbil_the_otter.html">Mijbil the Otter - Notes</a></li>
+            <li><a href="notes/madam_rides_the_bus.html">Madam Rides the Bus - Notes</a></li>
+            <li><a href="notes/the_sermon_at_benares.html">The Sermon at Benares - Notes</a></li>
+            <li><a href="notes/the_proposal.html">The Proposal (Play) - Notes</a></li>
+            <!-- Class 10 Poems -->
+            <li><a href="notes/dust_of_snow.html">Dust of Snow - Poem Notes</a></li>
+            <li><a href="notes/fire_and_ice.html">Fire and Ice - Poem Notes</a></li>
+            <li><a href="notes/amanda.html">Amanda! - Poem Notes</a></li>
+            <li><a href="notes/fog.html">Fog - Poem Notes</a></li>
+            <!-- Class 10 Footprints Without Feet -->
+            <li><a href="notes/a_triumph_of_surgery.html">A Triumph of Surgery - Notes</a></li>
+            <li><a href="notes/the_thiefs_story.html">The Thief's Story - Notes</a></li>
+            <li><a href="notes/the_midnight_visitor.html">The Midnight Visitor - Notes</a></li>
+            <li><a href="notes/bholi.html">Bholi - Notes</a></li>
+            <li><a href="#">Sample Solved Paper (2024)</a></li>
+        </ul>
+        <a class="back-btn" href="index.html">⬅ Back to Home</a>
+    </main>
+    <footer>
+        📧 Contact us: <a href="mailto:sebastudyhub@gmail.com">sebastudyhub@gmail.com</a><br>
+        © 2025 SEBA Study Hub. All rights reserved.
+    </footer>
+
+    <script>
+        function searchNotes() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let items = document.querySelectorAll('#notesList li');
+            items.forEach((li) => {
+                li.style.display = li.textContent.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
+
