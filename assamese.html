@@ -1,45 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="as">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assamese - SEBA Study Hub</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #fff8e1, #ffffff);
+            background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
         }
         header {
-            background-color: #f44336;
+            background-color: #43A047;
             color: white;
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         header h1 {
             margin: 0;
+            font-size: 2em;
         }
         main {
             padding: 20px;
+            max-width: 900px;
+            margin: auto;
         }
-        h2 {
-            color: #333;
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
-        p {
-            font-size: 1.1em;
-            color: #555;
+        .tab {
+            background: #A5D6A7;
+            border: 1px solid #66BB6A;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #1B5E20;
+            transition: background 0.3s, color 0.3s;
         }
-        a.back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            background: #f44336;
+        .tab.active {
+            background: #43A047;
             color: white;
-            padding: 10px 15px;
-            text-decoration: none;
+        }
+        #searchBox {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 15px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
-        a.back-btn:hover {
-            background: #d32f2f;
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #e8f5e9;
+            border-left: 5px solid #43A047;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        li a {
+            text-decoration: none;
+            color: #1B5E20;
+            font-weight: bold;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #43A047;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: #2E7D32;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            color: #555;
+            font-size: 0.95em;
+            border-top: 1px solid #ddd;
+        }
+        footer a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            #searchBox {
+                width: 90%;
+            }
+            li {
+                font-size: 0.95em;
+            }
         }
     </style>
 </head>
@@ -48,15 +131,112 @@
         <h1>Assamese - SEBA Study Hub</h1>
     </header>
     <main>
-        <h2>📘 Class 9 & 10 Assamese Notes</h2>
-        <p>All important lessons, grammar rules, and solved papers for SEBA Class 9 and 10 Assamese.</p>
-        <ul>
-            <li>Class 9 Assamese Prose and Poetry Notes</li>
-            <li>Class 10 Assamese Grammar & Essay Writing</li>
-            <li>Previous Years’ Question Papers in Assamese</li>
-            <li>Sample Answers for Board Exams</li>
-        </ul>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('class9')">📖 Class 9</div>
+            <div class="tab" onclick="showTab('class10')">📘 Class 10</div>
+            <div class="tab" onclick="showTab('grammar')">📒 Grammar</div>
+        </div>
+
+        <input type="text" id="searchBox" placeholder="🔎 Search chapters..." onkeyup="searchNotes()">
+
+        <div id="class9" class="content active">
+            <ul>
+                <li><a href="notes/shishulila.html">শিশুলীলা</a></li>
+                <li><a href="notes/manav_bandana.html">মানৱ বন্দনা</a></li>
+                <li><a href="notes/git_aru_chobi.html">গীত আৰু ছবি</a></li>
+                <li><a href="notes/dhumuha_prashna.html">প্ৰচণ্ড ধুমুহাই প্ৰশ্ন কৰিলে মোক</a></li>
+                <li><a href="notes/mor_desh.html">মোৰ দেশ</a></li>
+                <li><a href="notes/anyaor_byabohar.html">অন্যৰ প্রতি ব্যৱহাৰ</a></li>
+                <li><a href="notes/somoy.html">সময়</a></li>
+                <li><a href="notes/andhabishwas.html">অন্ধবিশ্বাস আৰু কু‑সংস্কাৰ</a></li>
+                <li><a href="notes/bharator_oikyo.html">ভাৰতৰ বৈচিত্ৰ্যৰ মাজত ঐক্য</a></li>
+                <li><a href="notes/pohorar_batere.html">পোহৰৰ বাটেৰে আগবঢ়া গাঁওখন</a></li>
+                <li><a href="notes/yuj.html">যুঁজ</a></li>
+                <li><a href="notes/loksanskriti.html">লোকসংস্কৃতি</a></li>
+                <li><a href="notes/hanumanta.html">হনুমন্তৰ লঙ্কা‑দৰ্শন</a></li>
+                <li><a href="notes/sukh.html">সুখ</a></li>
+                <li><a href="notes/chordhara.html">চোৰধৰা</a></li>
+                <li><a href="notes/samman.html">সন্মান</a></li>
+            </ul>
+        </div>
+
+        <div id="class10" class="content">
+            <ul>
+                <li><a href="notes/borgeet.html">বৰগীত</a></li>
+                <li><a href="notes/zikir.html">জিকিৰ</a></li>
+                <li><a href="notes/prashasti.html">প্ৰশস্তি</a></li>
+                <li><a href="notes/moi_asomiya.html">মই অসমীয়া</a></li>
+                <li><a href="notes/drishyantar.html">দৃশ্যান্তৰ</a></li>
+                <li><a href="notes/uddugi_hao.html">উদ্যোগী হওঁ আহাঁ</a></li>
+                <li><a href="notes/bharatiyo_sanskriti.html">ভাৰতীয় সংস্কৃতি</a></li>
+                <li><a href="notes/asomor_janagoshti.html">অসমৰ জনগোষ্ঠীৰ গাঁথনি আৰু সংস্কৃতি</a></li>
+                <li><a href="notes/internet.html">ইন্টাৰনেটৰ তিতা – মিঠা</a></li>
+                <li><a href="notes/arunima_sinha.html">অৰুণিমা সিনহা</a></li>
+                <li><a href="notes/aranya_jatra.html">অৰণ্য যাত্ৰা</a></li>
+                <li><a href="notes/parsot_avumukhi.html">পাৰস্যত এভুমুখি</a></li>
+                <li><a href="notes/kanai_chaturi.html">কানাইৰ চাতুৰী</a></li>
+                <li><a href="notes/dhar_jharu.html">ধৰ ঝাড়ু ধর ভাই</a></li>
+                <li><a href="notes/bishadyog.html">বিষাদযোগ</a></li>
+                <li><a href="notes/prachin_bharatiya.html">প্ৰাচীন ভাৰতীয় শিক্ষা</a></li>
+                <li><a href="notes/rijubharati.html">ঋজুভাৰতী</a></li>
+                <li><a href="notes/rapid_reader.html">(Rapid Reader – দ্রুত পাঠ বৈচিত্র্যময় অসম)</a></li>
+            </ul>
+        </div>
+
+        <div id="grammar" class="content">
+            <h3>📒 ব্যাকৰণ (Grammar)</h3>
+<ul>
+    <li><a href="notes/byakoron/letters.html">বৰ্ণ আৰু বৰ্ণমালা (Alphabet & Letters)</a></li>
+    <li><a href="notes/byakoron/words.html">শব্দ আৰু পদ (Words & Parts of Speech)</a></li>
+    <li><a href="notes/byakoron/voice.html">বাচ্য (Voice)</a></li>
+    <li><a href="notes/byakoron/tense.html">কাল (Tense)</a></li>
+    <li><a href="notes/byakoron/number.html">বচন (Number)</a></li>
+    <li><a href="notes/byakoron/samas.html">সমাস (Compound Words)</a></li>
+    <li><a href="notes/byakoron/sandhi.html">সন্ধি (Sandhi)</a></li>
+    <li><a href="notes/byakoron/suffix_prefix.html">প্ৰত্যয় (Suffix & Prefix)</a></li>
+    <li><a href="notes/byakoron/sentence.html">বাক্য গঠন (Sentence Formation)</a></li>
+    <li><a href="notes/byakoron/translation.html">অনুবাদ (Translation)</a></li>
+    <li><a href="notes/byakoron/adjectives.html">বিশেষণ (Adjectives)</a></li>
+    <li><a href="notes/byakoron/nouns.html">বিশেষ্য (Nouns)</a></li>
+    <li><a href="notes/byakoron/verbs.html">ক্রিয়া (Verbs)</a></li>
+    <li><a href="notes/byakoron/types_of_nouns.html">বিশেষ্যপদৰ প্ৰকাৰ (Types of Nouns)</a></li>
+    <li><a href="notes/byakoron/synonyms.html">সমান্থি শব্দ (Synonyms)</a></li>
+    <li><a href="notes/byakoron/antonyms.html">বিপৰীত শব্দ (Antonyms)</a></li>
+    <li><a href="notes/byakoron/changing_number.html">বচন পৰিবর্তন (Changing Number)</a></li>
+    <li><a href="notes/byakoron/types_of_sentences.html">বাক্যৰ প্ৰকাৰ (Types of Sentences)</a></li>
+    <li><a href="notes/byakoron/prepositions.html">সম্বন্ধবাচক (Prepositions)</a></li>
+    <li><a href="notes/byakoron/direct_indirect.html">সম্বন্ধীয় উক্তি (Direct & Indirect Speech)</a></li>
+</ul>
+
+        </div>
+
         <a class="back-btn" href="index.html">⬅ Back to Home</a>
     </main>
+    <footer>
+        📧 Contact us: <a href="mailto:sebastudyhub@gmail.com">sebastudyhub@gmail.com</a><br>
+        © 2025 SEBA Study Hub. All rights reserved.
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+            document.getElementById('searchBox').value = ''; // Clear search on tab switch
+            searchNotes(); // Reset search filter
+        }
+
+        function searchNotes() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let activeContent = document.querySelector('.content.active');
+            let items = activeContent.querySelectorAll('li');
+            items.forEach((li) => {
+                li.style.display = li.textContent.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>
